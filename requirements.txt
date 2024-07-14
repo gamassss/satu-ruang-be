@@ -5,3 +5,4 @@ redis
 celery
 pytest
 python-dotenv
+pydantic-settings
