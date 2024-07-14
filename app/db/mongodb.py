@@ -12,5 +12,6 @@ async def connect_to_mongo():
     print("Connected to database")
 
 async def close_mongo_connection():
-    db.client.close()
-    print("Closed database connection.")
+    if db.client:
+        db.client.close()
+        print("Closed database connection.")

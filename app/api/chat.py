@@ -1,11 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.schemas.message import MessageCreate, MessageResponse
+from app.schemas import MessageCreate, MessageResponse
 from app.services.chat_service import create_message, get_messages, get_message
-import logging
-from app.db.mongodb import db
-from bson import ObjectId
-from bson.errors import InvalidId
-from app.core.config import settings
 
 router = APIRouter()
 

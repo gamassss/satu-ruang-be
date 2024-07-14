@@ -1,6 +1,6 @@
 from app.db.mongodb import db
-from app.models.message import MessageModel
-from app.schemas.message import MessageCreate
+from app.models import MessageModel
+from app.schemas import MessageCreate
 from bson import ObjectId
 from bson.errors import InvalidId
 

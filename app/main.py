@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from app.core.config import settings
-from app.db.mongodb import connect_to_mongo, close_mongo_connection
-from app.api.chat import router as chat_router
+from app.core import settings
+from app.db import connect_to_mongo, close_mongo_connection
+from app.api import router as chat_router
 
 app = FastAPI(title=settings.PROJECT_NAME)
 
