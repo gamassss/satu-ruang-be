@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+motor
+redis
+celery
+pytest
+python-dotenv
