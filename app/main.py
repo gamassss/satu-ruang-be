@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.core import settings
 from app.db import connect_to_mongo, close_mongo_connection
 from app.api import api_router
+import os
 
 app = FastAPI(title=settings.PROJECT_NAME)
 
@@ -22,4 +23,3 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
-
