@@ -33,3 +33,7 @@ app.mount("/static", StaticFiles(directory=static_dir), name="static")
 async def get():
     return FileResponse(os.path.join(static_dir, 'index.html'))
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+
