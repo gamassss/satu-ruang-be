@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.schemas import MessageCreate, MessageResponse
-from app.services.chat_service import create_message, get_messages, get_message
+from app.services import create_message, get_messages, get_message
 
 router = APIRouter()
 
